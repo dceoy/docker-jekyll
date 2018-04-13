@@ -1,7 +1,5 @@
 FROM ruby:latest
 
-ADD Gemfile /tmp/Gemfile
-
 RUN set -e \
       && ln -sf /bin/bash /bin/sh
 
@@ -16,6 +14,8 @@ RUN set -e \
 
 RUN set -e \
       && cd /tmp \
+      && echo "source 'https://rubygems.org'" > Gemfile \
+      && echo "gem 'github-pages', group: :jekyll_plugins" >> Gemfile \
       && bundle install --path=/usr/local/bundle
 
 ENTRYPOINT ["/usr/local/bundle/bin/jekyll"]
