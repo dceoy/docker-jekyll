@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  jekyll:
+    container_name: jekyll
+    build:
+      context: .
+    image: dceoy/jekyll:latest
+    volumes:
+      - .:/work
+    ports:
+      - 4000:4000
+      - 35729:35729
+    entrypoint:
+      - /usr/local/bundle/bin/jekyll
+    command:
+      - serve
+      - --watch
+      - --drafts
