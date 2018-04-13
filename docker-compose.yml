@@ -7,7 +7,7 @@ services:
       context: .
     image: dceoy/jekyll:latest
     volumes:
-      - .:/work
+      - ${PWD}:/work
     working_dir: /work
     ports:
       - 4000:4000
@@ -16,5 +16,5 @@ services:
     command:
       - serve
       - --host=0.0.0.0
-      - --watch
       - --drafts
+      - --watch

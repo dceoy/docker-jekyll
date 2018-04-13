@@ -12,8 +12,18 @@ Pull the image from [Docker Hub](https://hub.docker.com/r/dceoy/jekyll/).
 $ docker pull dceoy/jekyll
 ```
 
-Run a container
+Usage
+-----
+
+Run a web server
 
 ```sh
-$ docker container run --rm -it -p 4000:4000 -v $(pwd):/work -w /work dceoy/jekyll -h
+$ docker container run --rm -it -p 4000:4000 -v $(pwd):/work -w /work \
+    dceoy/jekyll serve --host=0.0.0.0 --drafts --watch
+```
+
+Run a web server with docker-compose
+
+```sh
+$ docker-compose -f /path/to/docker-jekyll/docker-compose.yml up
 ```
