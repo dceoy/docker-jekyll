@@ -1,7 +1,7 @@
 docker-jekyll
 =============
 
-Dockerfile for Jekyll
+Dockerfile for Jekyll with GitHub Pages
 
 Docker image
 ------------

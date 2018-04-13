@@ -8,12 +8,13 @@ services:
     image: dceoy/jekyll:latest
     volumes:
       - .:/work
+    working_dir: /work
     ports:
       - 4000:4000
-      - 35729:35729
     entrypoint:
       - /usr/local/bundle/bin/jekyll
     command:
       - serve
+      - --host=0.0.0.0
       - --watch
       - --drafts
