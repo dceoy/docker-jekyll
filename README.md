@@ -18,7 +18,7 @@ Usage
 Run a web server
 
 ```sh
-$ docker container run --rm -it -p 4000:4000 -v $(pwd):/work -w /work \
+$ docker container run --rm -it -p 4000:4000 -v ${PWD}:/work -w /work \
     dceoy/jekyll serve --host=0.0.0.0 --drafts --watch
 ```
 

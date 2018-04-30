@@ -1,4 +1,4 @@
-FROM ruby
+FROM ruby:latest
 
 RUN set -e \
       && ln -sf /bin/bash /bin/sh
