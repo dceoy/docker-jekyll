@@ -5,14 +5,14 @@ RUN set -e \
 
 RUN set -e \
       && apt-get -y update \
-      && apt-get -y upgrade \
+      && apt-get -y dist-upgrade \
       && apt-get -y autoremove \
       && apt-get clean
 
 RUN set -e \
+      && echo "source 'https://rubygems.org'" > /tmp/Gemfile \
+      && echo "gem 'github-pages', group: :jekyll_plugins" >> /tmp/Gemfile \
       && cd /tmp \
-      && echo "source 'https://rubygems.org'" > Gemfile \
-      && echo "gem 'github-pages', group: :jekyll_plugins" >> Gemfile \
       && gem update \
       && bundle install --path=/usr/local/bundle
 
