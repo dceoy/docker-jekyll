@@ -9,8 +9,7 @@ RUN set -e \
       && apt-get -y update \
       && apt-get -y dist-upgrade \
       && apt-get -y install --no-install-recommends --no-install-suggests \
-                            g++ gcc libstdc++-6-dev libxml2-dev make ruby-dev \
-                            bundler zlib1g-dev \
+        g++ gcc libstdc++-6-dev libxml2-dev make ruby-dev bundler zlib1g-dev \
       && apt-get -y autoremove \
       && apt-get clean \
       && rm -rf /var/lib/apt/lists/*

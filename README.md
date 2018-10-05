@@ -27,3 +27,9 @@ Run a web server with docker-compose
 ```sh
 $ docker-compose -f /path/to/docker-jekyll/docker-compose.yml up
 ```
+
+Update Gemfile.lock
+
+```sh
+$ docker-compose run --rm --entrypoint=bundle jekyll update
+```
