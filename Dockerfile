@@ -20,4 +20,6 @@ RUN set -e \
       && echo "gem 'github-pages', group: :jekyll_plugins" >> /tmp/Gemfile \
       && bundle install --gemfile=/tmp/Gemfile --system
 
+EXPOSE 4000
+
 ENTRYPOINT ["/usr/local/bin/jekyll"]
