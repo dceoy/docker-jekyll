@@ -3,13 +3,15 @@ docker-jekyll
 
 Dockerfile for Jekyll with GitHub Pages
 
+[![CI to Docker Hub](https://github.com/dceoy/docker-jekyll/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/dceoy/docker-jekyll/actions/workflows/docker-publish.yml)
+
 Docker image
 ------------
 
 Pull the image from [Docker Hub](https://hub.docker.com/r/dceoy/jekyll/).
 
 ```sh
-$ docker pull dceoy/jekyll
+$ docker image pull dceoy/jekyll
 ```
 
 Usage
